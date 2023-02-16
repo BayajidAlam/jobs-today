@@ -12,7 +12,7 @@ const NavBar = () => {
   </>
 
   return (
-    <div className="navbar bg-base-100 container mx-auto">
+    <div className="navbar bg-white text container mx-auto">
 
     <div className="navbar-start">
 
@@ -27,7 +27,7 @@ const NavBar = () => {
       </div>
       <Link to='/' className="btn btn-ghost normal-case text-xl">Jobs Today</Link>
     </div>
-    <div className="navbar-center hidden lg:flex">
+    <div className="navbar-center hidden items-center lg:flex">
       <ul className="menu menu-horizontal px-1">
         {
           menuItems
