@@ -4,7 +4,7 @@ const FresherJobs = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch("fresherJob.json")
+    fetch("http://localhost:5000/fresherJob")
       .then((res) => res.json())
       .then((data) => setJobs(data));
   }, []);
