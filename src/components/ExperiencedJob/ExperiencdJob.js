@@ -16,8 +16,8 @@ const ExperiencdJob = ({job}) => {
       <GoLocation className='mr-2 text-lg'/> <p className='text-lg'>{location}</p>
       </div>
     </div>
-    <div className="card-actions justify-end">
-      <button className="btn bg-[#00D0FF] btn-md">Apply</button>
+    <div className="card-actions justify-center">
+      <button className="btn btn-sm bg-[#00D0FF] btn-md">Apply Now</button>
     </div>
   </div>
 </div>

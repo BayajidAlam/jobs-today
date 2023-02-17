@@ -29,8 +29,8 @@ const Header = () => {
             Dream Job
           </h1>
           <div>
-            <button className="common_button lg:mr-4 mb-2 md: mr-2 text-black text-xl bg-white">Job Seeker</button>
-            <button className="common_button text-xl bg-[#cb67fa] text-white">Job poster</button>
+            <button className="btn-1 lg:mr-4 mb-2 md:mr-2 text-black text-xl bg-white">Job Seeker</button>
+            <button className="btn-2 text-xl bg-[#cb67fa] text-white">Job poster</button>
           </div>
         </div>
         <div className="lg:h-[400px] lg:w-1/2" ref={container}></div>

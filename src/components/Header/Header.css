@@ -20,7 +20,26 @@
 }
 
 
-.common_button{
+
+.btn-1{
   padding: 0.8rem 2.5rem;
+  color: #cb67fa;
+  font-size: 20px;
+  font-weight: 500;
 }
 
+.btn-2{
+  padding: 0.8rem 2.5rem;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.btn-1:hover{
+  box-shadow: none;
+  box-shadow: 5px 6px 5px #cb67fa;
+}
+
+.btn-2:hover{
+  box-shadow: 5px 5px 6px white;
+}
