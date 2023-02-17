@@ -8,31 +8,36 @@ const auth = getAuth(app);
 const AuthProvider = ({children}) => {
 
   const [user,setUser] = useState(null);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   // create a new user 
   const createUser = (email,password) =>{
+    setLoading(true)
     return createUserWithEmailAndPassword(auth,email,password)
   }
 
   // sign in a existing user 
   const signInUser = (email,password) => {
+    setLoading(true)
     return signInWithEmailAndPassword(auth,email,password);
   }
 
   // update a user 
   const updateUser = (userInfo) => {
+    setLoading(true)
     return updateProfile(auth.currentUser, userInfo);
   }
 
   // sign out a user 
   const signOutUser = () => {
+    setLoading(true)
     return signOut(auth);
   }
 
   // auth observer 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth,currentUser =>{
+      setLoading(false)
       setUser(currentUser)
     })
   

@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
 
 const SignUp = () => {
+
+  let navigate = useNavigate();
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
 
   // context 
   const { createUser, updateUser } = useContext(AuthContext);
@@ -24,6 +28,7 @@ const SignUp = () => {
       updateUser(userInfo)
       .then(()=>{
         toast.success('Profile updated');
+        navigate(from, { replace: true });
       })
       .catch(err=>{
         toast.error(err.message);

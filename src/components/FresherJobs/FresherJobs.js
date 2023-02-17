@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GoLocation } from "react-icons/go";
+import { Link } from "react-router-dom";
 const FresherJobs = () => {
   const [jobs, setJobs] = useState([]);
 
@@ -33,8 +34,11 @@ const FresherJobs = () => {
                   </p>
                 </div>
               </div>
+              
               <div className="text-center mt-4 lg:mt-0">
-                <button className="btn btn-sm bg-[#00D0FF]">Apply</button>
+                <Link to='/application'>
+                  <button className="btn btn-sm bg-[#00D0FF]">Apply</button>
+                </Link>
               </div>
             </div>
           ))}
