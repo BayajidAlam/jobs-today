@@ -6,14 +6,14 @@ const TopItCompany = () => {
 
   // fetch bd top 3 from server
   useEffect(() => {
-    fetch("http://localhost:5000/bdTop3")
+    fetch("https://job-today-server.vercel.app/bdTop3")
       .then((res) => res.json())
       .then((data) => setBdTop3(data));
   }, []);
 
   // fetch world top 3 from server
   useEffect(() => {
-    fetch("http://localhost:5000/worldTop3")
+    fetch("https://job-today-server.vercel.app/worldTop3")
       .then((res) => res.json())
       .then((data) => setworldTop3(data));
   }, []);
@@ -36,9 +36,11 @@ const TopItCompany = () => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{single.companyName}</h2>
-        
+
                 <div className="card-actions justify-center">
-                  <button className="btn bg-[#00D0FF] btn-md">View Details</button>
+                  <button className="btn bg-[#00D0FF] btn-md">
+                    View Details
+                  </button>
                 </div>
               </div>
             </div>
@@ -56,9 +58,11 @@ const TopItCompany = () => {
                 <img src={single.logo} alt="Shoes" />
               </figure>
               <div className="card-body">
-              <h2 className="card-title">{single.companyName}</h2>
+                <h2 className="card-title">{single.companyName}</h2>
                 <div className="card-actions justify-center">
-                  <button className="btn bg-[#00D0FF] btn-md">View Details</button>
+                  <button className="btn bg-[#00D0FF] btn-md">
+                    View Details
+                  </button>
                 </div>
               </div>
             </div>
