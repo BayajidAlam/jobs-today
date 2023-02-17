@@ -1,4 +1,5 @@
 import React from 'react';
+import { GoLocation } from "react-icons/go";
 
 const ExperiencdJob = ({job}) => {
 
@@ -9,7 +10,12 @@ const ExperiencdJob = ({job}) => {
   <figure><img src={logo} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{positionName}</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div className='flex justify-between items-center'>
+      <h4 className='text-lg font-bold'>{companyName}</h4>
+      <div className='flex items-center'>
+      <GoLocation className='mr-2 text-lg'/> <p className='text-lg'>{location}</p>
+      </div>
+    </div>
     <div className="card-actions justify-end">
       <button className="btn bg-[#00D0FF] btn-md">Apply</button>
     </div>

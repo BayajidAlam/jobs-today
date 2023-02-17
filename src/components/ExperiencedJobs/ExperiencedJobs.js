@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { GoLocation } from "react-icons/go";
 import ExperiencdJob from "../ExperiencedJob/ExperiencdJob";
 
 const ExperiencedJobs = () => {
@@ -23,6 +22,11 @@ const ExperiencedJobs = () => {
           {jobs.map((job) => (
             <ExperiencdJob key={job._id} job={job} />
           ))}
+        </div>
+        <div className="text-center lg:my-4 mt-2">
+          <button className="btn btn-md bg-[#00D0FF] w-32 mx-auto">
+            See All
+          </button>
         </div>
       </div>
     </div>
