@@ -11,7 +11,7 @@ const ExperiencedJobs = () => {
   }, []);
 
   return (
-    <div className="lg:pb-12 py-6 bg-base-300">
+    <div className="bg-base-300">
       <p className="text-center">Job Categories</p>
       <div className="container mx-auto">
         <h1 className="text-center lg:text-3xl text-2xl font-bold mb-4">
@@ -24,7 +24,7 @@ const ExperiencedJobs = () => {
           ))}
         </div>
         <div className="text-center lg:my-4 mt-2">
-          <button className="btn btn-md bg-[#00D0FF] w-32 mx-auto">
+          <button className="btn mb-4 btn-md bg-[#00D0FF] w-32 mx-auto">
             See All
           </button>
         </div>
