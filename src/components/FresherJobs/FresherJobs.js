@@ -39,7 +39,7 @@ const FresherJobs = () => {
             </div>
           ))}
           <button className="btn btn-md bg-[#00D0FF] w-32 mx-auto">
-            See All
+            See All Jobs
           </button>
         </div>
       </div>

@@ -25,7 +25,7 @@ const ExperiencedJobs = () => {
         </div>
         <div className="text-center lg:my-4 mt-2">
           <button className="btn mb-4 btn-md bg-[#00D0FF] w-32 mx-auto">
-            See All
+          See All Jobs
           </button>
         </div>
       </div>
