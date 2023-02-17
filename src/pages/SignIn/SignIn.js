@@ -11,19 +11,21 @@ const SignIn = () => {
   // context 
   const { signInUser } = useContext(AuthContext);
 
-  const [data, setData] = useState("");
   const { register,formState: {errors}, handleSubmit } = useForm();
+  const [loginError, setLogInError] = useState()
 
   // log in a existing user 
   const handleLogin = data => {
+    setLogInError('')
     signInUser(data.email,data.password)
     .then(result=>{
       const user = result.user;
       toast.success("User signed in successfully!")
     })
-    .then(err=>{
+    .catch(err=>{
       const errorMessage = err.message;
       toast.error(errorMessage);
+      setLogInError(errorMessage);
     })
   }
 
@@ -67,8 +69,10 @@ const SignIn = () => {
           </label>
         </div>
 
-        <p>{data}</p>
+      
         <input className="btn w-full font-bold bg-[#000000]" type="submit" />
+        <div>
+        </div>
         <p className="text-black mt-3 font-semibold">New to Jobs Today? <Link className="text-[#cb66fa]" to='/signup'>Create new account</Link></p>
         <div className="divider">OR</div>
         <button className="btn btn-outline w-full text-primary">Continue with google</button>

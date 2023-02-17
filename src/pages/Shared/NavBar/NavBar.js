@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { toast, Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../context/AuthProvider';
 import './Nav.css';
 
 const NavBar = () => {
 
+
+  const { user,signOutUser } = useContext(AuthContext);
 
   const menuItems = <>
       <li><Link to='/'>Home</Link></li>
       <li><Link to='/about'>About</Link></li>
       <li><Link to='/contacts'>Contact us</Link></li>
   </>
+
+  const handleSignOut = () => {
+    signOutUser()
+    .then(()=>{
+
+    })
+    .catch(err=>{
+      toast.error(err.message)
+    })
+  }
 
   return (
     <div className="navbar bg-white text container mx-auto">
@@ -35,8 +49,14 @@ const NavBar = () => {
       </ul>
     </div>
     <div className="navbar-end">
-      <Link className='btn btn-sm bg-[#00D0FF]' to='/signin'>Sign in</Link>
+      {
+        user?.uid ?
+        <button onClick={handleSignOut} className='btn btn-sm bg-[#00D0FF] font-bold'>Sign Out</button>
+        :
+        <Link className='btn btn-sm bg-[#00D0FF] font-bold' to='/signin'>Sign in</Link>
+      }
     </div>
+    <Toaster/>
   </div>
   );
 };
