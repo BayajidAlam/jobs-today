@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthProvider";
 import './Signup.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const SignIn = () => {
+
+  // context 
+  const { signInUser } = useContext(AuthContext);
 
   const [data, setData] = useState("");
   const { register,formState: {errors}, handleSubmit } = useForm();
 
+  // log in a existing user 
   const handleLogin = data => {
-    console.log(data)
+    signInUser(data.email,data.password)
+    .then(result=>{
+      const user = result.user;
+      toast.success("User signed in successfully!")
+    })
+    .then(err=>{
+      const errorMessage = err.message;
+      toast.error(errorMessage);
+    })
   }
+
   return (
     <div className="flex flex-col justify-center items-center form-container">
       <form
@@ -53,12 +68,12 @@ const SignIn = () => {
         </div>
 
         <p>{data}</p>
-        <input className="btn w-full bg-[#000000]" type="submit" />
-        <p className="text-[#000000]">New to Jobs Today?<Link to='/signup'>Create new account</Link></p>
+        <input className="btn w-full font-bold bg-[#000000]" type="submit" />
+        <p className="text-black mt-3 font-semibold">New to Jobs Today? <Link className="text-[#cb66fa]" to='/signup'>Create new account</Link></p>
         <div className="divider">OR</div>
         <button className="btn btn-outline w-full text-primary">Continue with google</button>
       </form>
-      
+      <Toaster/>
     </div>
   );
 };
