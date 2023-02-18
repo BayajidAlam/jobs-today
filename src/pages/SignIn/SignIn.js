@@ -32,7 +32,7 @@ const SignIn = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center form-container">
+    <div className="flex flex-col justify-center items-center form-container h-screen">
       <form
         className="lg:w-1/4 w-full md:w-1/2 lg:py-16 md:py-8 py-4 lg:px-8 px-4 md:mx-2 bg-white shadow-2xl rounded-md"
         onSubmit={handleSubmit(handleLogin)}
