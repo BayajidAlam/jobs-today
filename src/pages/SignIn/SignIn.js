@@ -34,7 +34,7 @@ const SignIn = () => {
   return (
     <div className="flex flex-col justify-center items-center form-container">
       <form
-        className="w-1/4 py-16 px-8 bg-white shadow-2xl rounded-md"
+        className="lg:w-1/4 w-full md:w-1/2 lg:py-16 md:py-8 py-4 lg:px-8 px-4 md:mx-2 bg-white shadow-2xl rounded-md"
         onSubmit={handleSubmit(handleLogin)}
       >
         <p className="text-3xl text-[#000000] font-semibold text-center  mb-8">Login</p>

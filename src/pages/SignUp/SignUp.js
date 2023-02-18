@@ -44,7 +44,7 @@ const SignUp = () => {
     <div className="flex flex-col justify-center items-center form-container">
     <form
       onSubmit={handleSubmit(handleSignUp)}
-      className="w-1/4 py-16 px-8 bg-white shadow-2xl rounded-md"
+      className="lg:w-1/4 w-full md:w-1/2 lg:py-16 py-8 lg:px-8 px-4 md:px-6 bg-white shadow-2xl rounded-md"
     >
       <p className="text-3xl text-[#000000] font-semibold text-center  mb-8">Sign Up</p>
 
