@@ -28,8 +28,26 @@
   line-height: 20px;
 }
 
+
 .input-container{
   width: 750px;
+}
+
+@media screen and (max-width:500px) {
+  .main-container{
+    width: 100%;
+    margin: 0 0;
+  }
+  .common-btn{
+    width: 200px;
+    height: 70px;
+    font-size: 18px;
+    line-height: 15px;
+  }
+  .input-container{
+    width: 96%;
+    margin: 5px auto;
+  }
 }
 
 .common-input{
@@ -44,4 +62,22 @@
   width: 100%;
   border: 1px solid gray;
   height: 150px;
+  padding: 15px 10px;
+}
+
+@media screen and (max-width:768px) {
+  .main-container{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .common-btn{
+    width: 200px;
+    height: 70px;
+    font-size: 18px;
+    line-height: 15px;
+  }
+  .input-container{
+    width: 96%;
+    margin: 5px auto;
+  }
 }
