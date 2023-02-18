@@ -1,4 +1,9 @@
-.upperContainer{
+.main-container{
+  width: 65%;
+  margin: 30px auto;
+}
+
+.common-btn{
   background:-moz-linear-gradient(353deg, rgba(55, 119, 183, 1) 7%, rgba(203, 103, 250, 1) 100%); 
 
   /* safari 5.1+,chrome 10+ */
@@ -11,8 +16,32 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3777B7', endColorstr='#CB67FA', GradientType=1 );
 
   /* ie 10+ */
-  background:-ms-linear-gradient(353deg, rgba(55, 119, 183, 1) 7%, rgba(203, 103, 250, 1) 100%);
+  background:-ms-linear-gradient(353deg, rgba(55, 119, 183, 1) 7%, rgb(161, 0, 235) 100%);
 
   /* global 94%+ browsers support */
   background:linear-gradient(353deg, rgba(55, 119, 183, 1) 7%, #cb67fa 100%);
+  color: white;
+
+  width: 400px;
+  height: 110px;
+  font-size: 26px;
+  line-height: 20px;
+}
+
+.input-container{
+  width: 750px;
+}
+
+.common-input{
+  width: 100%;
+  background:white;
+  color: black;
+  padding: 15px 10px;
+  border: 1px solid gray;
+}
+
+.input-textarea{
+  width: 100%;
+  border: 1px solid gray;
+  height: 150px;
 }
