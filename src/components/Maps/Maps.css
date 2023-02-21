@@ -4,3 +4,17 @@
   margin: 30px auto;
 }
 
+@media screen and (max-width:500px) {
+  .leaflet-container{
+    width: 100%;
+    margin: 10px 10px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .leaflet-container{
+    width: 80%;
+    margin: 20px auto;
+  }
+}
