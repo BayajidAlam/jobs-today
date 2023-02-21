@@ -18,7 +18,6 @@ const TopItCompany = () => {
       .then((data) => setworldTop3(data));
   }, []);
 
-
   return (
     <div>
       <p className="text-center">Top It Company</p>
@@ -30,9 +29,10 @@ const TopItCompany = () => {
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
           {bdTop3.map((single) => (
-            <div 
-            key={single._id}
-            className="card card-compact lg:w-96 bg-base-100 w-full shadow-xl mx-auto lg:my-4 md:mb-2">
+            <div
+              key={single._id}
+              className="card card-compact lg:w-96 bg-base-100 w-full shadow-xl mx-auto lg:my-4 md:mb-2"
+            >
               <figure>
                 <img src={single.logo} className="w-full h-48" alt="Shoes" />
               </figure>
@@ -55,9 +55,10 @@ const TopItCompany = () => {
         </h1>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 pb-4">
           {worldTop3.map((single) => (
-            <div 
-            key={single._id}
-            className="card card-compact lg:w-96 w-full bg-base-100 shadow-xl mx-auto lg:my-4">
+            <div
+              key={single._id}
+              className="card card-compact lg:w-96 w-full bg-base-100 shadow-xl mx-auto lg:my-4"
+            >
               <figure className="w-full h-48">
                 <img src={single.logo} alt="Shoes" />
               </figure>

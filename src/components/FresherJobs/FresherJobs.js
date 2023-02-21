@@ -34,9 +34,9 @@ const FresherJobs = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="text-center mt-4 lg:mt-0">
-                <Link to='/application'>
+                <Link to="/application">
                   <button className="btn btn-sm bg-[#00D0FF]">Apply</button>
                 </Link>
               </div>
